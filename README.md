@@ -3,6 +3,7 @@
 ## Contents
 * [Background](#background)
 * [Dataset](#dataset)
+* [Methodology](#methodology)
 * [Results](#results)
 
 ## Background
@@ -29,8 +30,11 @@ It contains 671 user, 9125 movies and 100004 ratings and there are no missing va
 
 <em>Table 2: `movies.csv` file.</em>
 
+## Methodology
+In this project, we utilize two algorithms to build model which are ALS and deep leraning. In terms of ALS algorithm, it is a popular algorithm whihc is implemented in [Apache Spark ML](https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.ml.recommendation.ALS.html#pyspark.ml.recommendation.ALS) and built for a larges-scale collaborative filtering problems. So, we consider to use the method in this dataset. For the deep learning algorithm, we use [Keras](https://keras.io/) to construct network. In this project, we only tune the rank parameter in ALS alogrithm, if we consider hyperparameter or different topologies toward both methods, the results may be different.
+
 ## Results
-For the userID 474, different algorithms provide different recommendations.
+For the userID 474, different algorithms provide different recommendations. The results as following,
 
 |Movies with high ratings from user |
 |:------------------------------   |
